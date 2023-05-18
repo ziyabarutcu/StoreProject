@@ -49,3 +49,30 @@ class Magaza:
         print("Fiyatlar:")
         print(fiyat_liste)
         return True
+    def elemanAdiBulma(self):
+        i = 1
+        eleman_liste = []
+        liste = []
+        fiyat_liste = []
+        for j in elemanlar:
+            liste.append(elemanlar[str(i)])
+            i += 1
+        i = 1
+        for eleman in liste:
+            if eleman not in eleman_liste:
+                eleman_liste.append(eleman)
+                fiyat_liste.append(satislar[str(i)])
+
+            elif (eleman in eleman_liste):
+                for j in range(0, (len(liste) - 1)):
+                    if (eleman == (eleman_liste[j])):
+                        fiyat_liste[j] += satislar[str(i)]
+                        break
+
+            i += 1
+
+        print("\n Satıcılar:")
+        print(eleman_liste)
+        print("Satışlar:")
+        print(fiyat_liste)
+        return True
