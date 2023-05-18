@@ -81,3 +81,32 @@ class Magaza:
         print(a)
         print("\n")
         print(b)
+def main():
+
+    i=1
+    while True:
+
+        magazaAdi_input = input("\n Mağaza Adı: ")
+        saticiAdi_input=input("Satıcı Adı:")
+        saticiCinsi_input=input("Satıcı Cinsi:")
+        satisTutari_input=float(input("Satış Tutarı:"))
+
+        satis = Magaza(magazaAdi_input, saticiAdi_input, saticiCinsi_input, satisTutari_input)
+        kelimeler[str(i)]=satis.magaza_adi
+        satislar[str(i)]=satis.satis_tutari
+        elemanlar[str(i)]=satis.satici_adi
+
+
+        i+=1
+        devammi = input("çıkmak istiyor musunuz? (H/h) (E/e)")
+        if devammi == 'e' or devammi == "E":
+            break
+
+    a=satis.magazaAdiBulma()
+    b=satis.elemanAdiBulma()
+
+    satis.__str__(a,b)
+
+
+
+main()
