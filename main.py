@@ -76,3 +76,8 @@ class Magaza:
         print("Satışlar:")
         print(fiyat_liste)
         return True
+
+    def __str__(self,a,b):
+        print(a)
+        print("\n")
+        print(b)
