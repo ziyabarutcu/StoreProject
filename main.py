@@ -82,6 +82,14 @@ class Magaza:
         print("\n")
         print(b)
 def main():
+    print("---------------------------------------------------------------------------\n")
+    print("Mağaza Satış Uygulamasına Hoş Geldiniz")
+    print("---------------------------------------------------------------------------\n")
+    check=input(" Uygulamadan hemen çıkmak için(1'e)  Uygulamaya geçmek için herhangi bir tuşa basın ")
+    if check=="1":
+        break
+    else:
+        continue
 
     i=1
     while True:
